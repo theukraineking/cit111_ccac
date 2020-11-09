@@ -1,0 +1,60 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package week6;
+import java.math.BigInteger;
+
+import java.util.Scanner;
+import java.util.Random;
+/**
+ *
+ * @author Dennis
+ */
+public class MysteryDoor {
+    public static void main(String[] args) {
+        //creats scanner
+        Scanner dScanner = new Scanner(System.in);
+        //creats usr int
+        int doorNumber;
+        //provides prompts to game
+        System.out.println("This is mysteery door please select a door");
+        System.out.println("please select either door 1, 2 , or 3");
+        doorNumber = dScanner.nextInt();
+        //creating cases
+        switch(doorNumber){
+            case 1:
+                System.out.println("Too bad now you are sent to the GULAG");
+                break;
+            case 2:
+                generateBigNumber();
+                break;
+            case 3:
+                printStatement();
+                break;
+        }
+    }
+        //second door output
+        public static void generateBigNumber(){
+            System.out.println("the number you get is how much you win");
+            //creating random r
+            Random r = new Random();
+            //making the integer
+            BigInteger bigInt = new BigInteger(1000000, r);
+            //prints out number
+            System.out.println(bigInt); 
+            System.out.println("**********CONGRATS!!!!. You probaly couldnt see the text above but this is how money much you win!!!");
+        }
+        //third door outputs
+         public static void printStatement(){
+            System.out.println("H E L L O  ✧･ﾟ: *✧･ﾟ:* 　　 *:･ﾟ✧*:･ﾟ✧\n" +
+".・゜゜・　　・゜゜・．\n" +
+"｡･ﾟﾟ･　　･ﾟﾟ･｡  G O O D B Y E");
+        }
+        
+            
+        
+    }
+    
+
